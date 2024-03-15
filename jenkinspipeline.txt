@@ -13,7 +13,7 @@ pipeline{
         } 
         stage('Testing Environment'){
             steps{
-            sh 'firebase deploy -P class-exercise-it --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh '/usr/bin/firebase deploy -P class-exercise-it --token "$FIREBASE_DEPLOY_TOKEN"'
             input message: 'After testing. Do you want to continue with Staging Environment? (Click "Proceed" to continue)'
             }
         } 
