@@ -19,13 +19,13 @@ pipeline{
         } 
         stage('Staging Environment'){
             steps{
-             //sh 'firebase deploy -P devops-proj-staging --token "$FIREBASE_DEPLOY_TOKEN"'
+             sh '/usr/bin/firebase deploy -P class-exercise-stage --token "$FIREBASE_DEPLOY_TOKEN"'
              echo  'Building'
             }
         } 
         stage('Production Environment'){
             steps{
-            //sh 'firebase deploy -P devops-proj-production-bcfd9 --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh '/usr/bin/firebase deploy -P class-exercise-prod --token "$FIREBASE_DEPLOY_TOKEN"'
             echo 'Building'
             }
         } 
